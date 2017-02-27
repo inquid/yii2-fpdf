@@ -1,21 +1,27 @@
 {
-    "name": "stern87/yii2-fpdf",
-    "description": "Includes FPDF in Yii2",
-    "type": "yii2-extension",
-    "keywords": ["yii2","extension"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Dominik Hendrix",
-            "email": "dominik.hendrix@hotmail.de"
-        }
-    ],
-    "require": {
-        "yiisoft/yii2": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "stern87\\pdf\\": ""
-        }
+  "name": "integready/yii2-fpdf",
+  "description": "Includes FPDF in Yii2",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension"
+  ],
+  "homepage": "https://github.com/IntegReady/yii2-fpdf",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "IntegReady"
     }
+  ],
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "integready\\pdf\\": ""
+    }
+  }
 }
