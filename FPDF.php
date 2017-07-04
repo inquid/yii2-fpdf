@@ -189,7 +189,7 @@ class FPDF
     function Error($msg)
     {
         // Fatal error
-        throw new Exception('FPDF error: ' . $msg);
+        throw new \Exception('FPDF error: ' . $msg);
     }
 
     protected function _getpagesize($size)
