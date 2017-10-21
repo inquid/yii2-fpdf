@@ -1,6 +1,6 @@
 <?php
 
-namespace integready\pdf;
+namespace inquid\pdf;
 
 /*******************************************************************************
  * FPDF                                                                         *
