@@ -24,7 +24,7 @@
   "autoload": {
     "psr-4": {
       "julianb90\\pdf\\": "",
-      "julianb90\\pdf\\utf8": "/utf8"
+      "julianb90\\pdf\\utf8\\": "/utf8"
     }
   }
 }
