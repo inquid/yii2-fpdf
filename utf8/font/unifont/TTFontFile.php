@@ -1,5 +1,6 @@
 <?php
 
+namespace julianb90\pdf\utf8\font\unifont;
 
 /*******************************************************************************
 * TTFontFile class                                                             *
@@ -1084,6 +1085,3 @@ var $maxStrLenRead;
 
 
 }
-
-
-?>

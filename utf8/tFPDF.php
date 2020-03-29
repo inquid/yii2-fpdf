@@ -2,6 +2,8 @@
 
 namespace julianb90\pdf\utf8;
 
+use julianb90\pdf\utf8\font\unifont\TTFontFile;
+
 /*******************************************************************************
  * tFPDF (based on FPDF 1.82)                                                   *
  *                                                                              *
@@ -491,7 +493,6 @@ class tFPDF
 			}
 			if (!isset($type) ||  !isset($name) || $originalsize != $ttfstat['size']) {
 				$ttffile = $ttffilename;
-				require_once($this->fontpath . 'unifont/ttfonts.php');
 				$ttf = new TTFontFile();
 				$ttf->getMetrics($ttffile);
 				$cw = $ttf->charWidths;
@@ -782,7 +783,7 @@ class tFPDF
 		$s = str_replace("\r", '', $txt);
 		if ($this->unifontSubset) {
 			$nb = mb_strlen($s, 'utf-8');
-			while ($nb > 0 && mb_substr($s, $nb - 1, 1, 'utf-8') == "\n")	$nb--;
+			while ($nb > 0 && mb_substr($s, $nb - 1, 1, 'utf-8') == "\n")    $nb--;
 		} else {
 			$nb = strlen($s);
 			if ($nb > 0 && $s[$nb - 1] == "\n")
@@ -1785,7 +1786,6 @@ class tFPDF
 			// TrueType embedded SUBSETS or FULL
 			else if ($type == 'TTF') {
 				$this->fonts[$k]['n'] = $this->n + 1;
-				require_once($this->fontpath . 'unifont/ttfonts.php');
 				$ttf = new TTFontFile();
 				$fontname = 'MPDFAA' . '+' . $font['name'];
 				$subset = $font['subset'];
@@ -1868,7 +1868,7 @@ class tFPDF
 					if ($kd == 'Flags') {
 						$v = $v | 4;
 						$v = $v & ~32;
-					}	// SYMBOLIC font flag
+					}    // SYMBOLIC font flag
 					$this->_out(' /' . $kd . ' ' . $v);
 				}
 				$this->_put('/FontFile2 ' . ($this->n + 2) . ' 0 R');
@@ -1891,7 +1891,7 @@ class tFPDF
 				$this->_putstream($cidtogidmap);
 				$this->_put('endobj');
 
-				//Font file 
+				//Font file
 				$this->_newobj();
 				$this->_put('<</Length ' . strlen($fontstream));
 				$this->_put('/Filter /FlateDecode');
