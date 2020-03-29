@@ -1,5 +1,5 @@
 {
-  "name": "inquid/yii2-fpdf",
+  "name": "julianb90/yii2-fpdf",
   "description": "FPDF in Yii2",
   "type": "yii2-extension",
   "keywords": [
@@ -8,11 +8,11 @@
     "fpdf",
     "pdf"
   ],
-  "homepage": "https://github.com/inquid/yii2-fpdf",
+  "homepage": "https://github.com/julianb90/yii2-fpdf",
   "license": "MIT",
   "authors": [
     {
-      "name": "IntegReady"
+      "name": "Julian-B90"
     }
   ],
   "require": {
